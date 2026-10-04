@@ -206,5 +206,3 @@ export const site = {
     privacyHref: "#privacy", // [PLACEHOLDER] link to your privacy policy page
   },
 };
-
-export type Site = typeof site;
