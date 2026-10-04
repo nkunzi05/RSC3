@@ -7,6 +7,7 @@
   body { @apply bg-ivory text-charcoal font-sans antialiased; font-feature-settings: "ss01", "cv11"; }
   h1, h2, h3, h4 { @apply font-serif font-normal tracking-tight; }
   ::selection { @apply bg-sand text-charcoal; }
+  body:has(dialog[open]) { overflow: hidden; }
   :focus-visible { outline: 2px solid #A8674A; outline-offset: 3px; }
 }
 

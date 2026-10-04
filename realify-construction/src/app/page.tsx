@@ -1,7 +1,7 @@
 import { site } from "@/data/site";
 import Header from "@/components/Header";
 import Reveal from "@/components/Reveal";
-import Photo from "@/components/Photo";
+import Image from "next/image";
 import Logo from "@/components/Logo";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
@@ -18,7 +18,7 @@ export default function Home() {
         {/* 1 · HERO */}
         <section id="top" className="relative flex h-[100svh] min-h-[620px] items-end overflow-hidden bg-charcoal text-white">
           <div className="hero-zoom absolute inset-0">
-            <Photo src={site.hero.image} alt={site.hero.imageAlt} fill priority sizes="100vw" className="object-cover" />
+            <Image src={site.hero.image} alt={site.hero.imageAlt} fill priority sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/30" />
           <div className="container-x relative pb-16 md:pb-24">
@@ -74,7 +74,7 @@ export default function Home() {
               {site.services.map((s, i) => (
                 <Reveal as="li" key={s.title} delay={(i % 3) * 120}>
                   <article className="group relative aspect-[4/5] overflow-hidden bg-stone" tabIndex={0}>
-                    <Photo src={s.image} alt={s.alt} fill sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" className="zoom-img object-cover" />
+                    <Image src={s.image} alt={s.alt} fill sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" className="zoom-img object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent transition-opacity duration-700 group-hover:from-black/85" />
                     <div className="absolute inset-x-0 bottom-0 p-7 text-white">
                       <span className="text-[11px] tracking-[0.2em] text-white/70">{String(i + 1).padStart(2, "0")}</span>
@@ -96,7 +96,7 @@ export default function Home() {
             <Reveal>
               <a href={site.featured.link} className="group block">
                 <div className="relative aspect-[4/5] overflow-hidden bg-sand sm:aspect-[16/9]">
-                  <Photo src={site.featured.image} alt={site.featured.alt} fill sizes="100vw" className="zoom-img object-cover" />
+                  <Image src={site.featured.image} alt={site.featured.alt} fill sizes="100vw" className="zoom-img object-cover" />
                 </div>
               </a>
             </Reveal>
@@ -117,7 +117,7 @@ export default function Home() {
                 <p className="body-lg">{site.featured.text}</p>
                 <a href={site.featured.link} className="link-line mt-8">View Project →</a>
                 <div className="group relative mt-12 aspect-[3/2] overflow-hidden bg-sand">
-                  <Photo src={site.featured.detailImage} alt={site.featured.detailAlt} fill sizes="(min-width:1024px) 50vw, 100vw" className="zoom-img object-cover" />
+                  <Image src={site.featured.detailImage} alt={site.featured.detailAlt} fill sizes="(min-width:1024px) 50vw, 100vw" className="zoom-img object-cover" />
                 </div>
               </Reveal>
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
               <h2 id="process-title" className="h-section mt-6">{site.process.heading}</h2>
               <p className="mt-8 text-[17px] leading-[1.8] text-ivory/75">{site.process.intro}</p>
               <div className="group relative mt-12 aspect-[4/5] overflow-hidden bg-stone-dark">
-                <Photo src={site.process.image} alt={site.process.alt} fill sizes="(min-width:1024px) 40vw, 100vw" className="zoom-img object-cover" />
+                <Image src={site.process.image} alt={site.process.alt} fill sizes="(min-width:1024px) 40vw, 100vw" className="zoom-img object-cover" />
               </div>
             </Reveal>
             <ol className="lg:col-span-6 lg:col-start-7 lg:pt-24">
@@ -168,7 +168,7 @@ export default function Home() {
         <section id="invest" className="relative bg-sand">
           <div className="grid lg:grid-cols-2">
             <div className="group relative min-h-[420px] overflow-hidden lg:min-h-full">
-              <Photo src={site.invest.image} alt={site.invest.alt} fill sizes="(min-width:1024px) 50vw, 100vw" className="zoom-img object-cover" />
+              <Image src={site.invest.image} alt={site.invest.alt} fill sizes="(min-width:1024px) 50vw, 100vw" className="zoom-img object-cover" />
             </div>
             <div className="px-5 py-24 sm:px-8 md:py-32 lg:px-20">
               <Reveal>
