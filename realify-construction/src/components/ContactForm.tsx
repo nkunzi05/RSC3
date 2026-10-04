@@ -39,7 +39,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2" noValidate={false}>
+    <form onSubmit={onSubmit} className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
       <div>
         <label htmlFor="name" className="label">Name</label>
         <input id="name" name="name" required autoComplete="name" className="field" placeholder="Your full name" />
