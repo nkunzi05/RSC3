@@ -12,8 +12,8 @@ const config: Config = {
         accent: { DEFAULT: "#A8674A", dark: "#8A523A" }, // terracotta — swap to #6B7F8E for dusty blue
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', "Georgia", "serif"],
-        sans: ['"Inter Variable"', "system-ui", "sans-serif"],
+        serif: ["var(--font-cormorant)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       letterSpacing: { widest2: "0.25em" },
       transitionTimingFunction: { soft: "cubic-bezier(0.22, 1, 0.36, 1)" },
