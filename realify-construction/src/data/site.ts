@@ -196,9 +196,9 @@ export const site = {
       "Other",
     ],
     budgets: ["Under US$10,000", "US$10,000 – 50,000", "US$50,000 – 150,000", "US$150,000 – 500,000", "US$500,000+", "Not sure yet"],
-    // Optional: set a Formspree (or similar) endpoint to receive submissions by email.
-    // Leave empty to open the visitor's email app with the message pre-filled.
-    endpoint: "",
+    // Submissions go to /api/inquiry (Resend email + optional file via Vercel Blob).
+    // Leave empty to fall back to opening the visitor's email app.
+    endpoint: "/api/inquiry",
   },
 
   footer: {
